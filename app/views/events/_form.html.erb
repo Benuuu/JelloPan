@@ -1,0 +1,18 @@
+<%= render "shared/error_messages", :target => @event %>
+
+<p>
+  <%= form.label :album %><br />
+  <%= form.text_field :album %>
+</p>
+<p>
+  <%= form.label :host %><br />
+  <%= form.text_field :host %>
+</p>
+<p>
+  <%= form.label :ingredient %><br />
+  <%= form.text_field :ingredient %>
+</p>
+<p>
+  <%= form.label :event_date %><br />
+  <%= form.date_select :event_date %>
+</p>

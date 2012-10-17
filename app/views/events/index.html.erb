@@ -1,0 +1,12 @@
+<ul>
+<% @events.each do |event| %>
+  <li><b><%= event.host %></b> hosted JelloPan on <b><%= event.event_date %></b> playing the album <b><%= event.album %></b> with the secret ingredient <b><%= event.ingredient %></b> 
+  <%= link_to "edit", edit_event_path(event.id) %> 
+  <%= link_to "delete", event, method: :delete,
+                               data: { confirm: "You sure?" },
+                               title: event.album %>
+  </li>
+<% end %>
+</ul>
+
+<%= link_to 'add event', new_event_path %>

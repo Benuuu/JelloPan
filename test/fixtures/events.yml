@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  host: MyString
+  event_date: 2012-10-17
+  album: MyString
+  ingredient: MyString
+
+two:
+  host: MyString
+  event_date: 2012-10-17
+  album: MyString
+  ingredient: MyString

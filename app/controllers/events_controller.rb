@@ -22,6 +22,7 @@ class EventsController < ApplicationController
   end
   
   def update
+    @event = Event.find(params[:id])
     if @event.update_attributes(params[:event])
       flash[:success] = "event updated"
       redirect_to root_url

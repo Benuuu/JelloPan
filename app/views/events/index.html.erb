@@ -2,7 +2,7 @@
 
 <ul>
 <% @events.each do |event| %>
-  <li><b><%= event.host %></b> hosted JelloPan on <b><%= event.event_date %></b> playing the album <b><%= event.album %></b> with the secret ingredient <b><%= event.ingredient %></b> 
+  <li><b><%= event.host %></b> hosted JelloPan on <b><%= event.event_date.strftime("%B %d, %Y") %></b> playing the album <b><%= event.album %></b> with the secret ingredient <b><%= event.ingredient %></b> 
   <%= link_to "edit", edit_event_path(event.id) %> 
   <%= link_to "delete", event, method: :delete,
                                data: { confirm: "You sure?" },
@@ -11,4 +11,4 @@
 <% end %>
 </ul>
 
-<%= link_to 'add event', new_event_path %>
+<%= link_to 'Add Event', new_event_path, :class => "btn" %>

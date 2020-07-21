@@ -2,8 +2,8 @@
 
 <ul>
 <% @events.each do |event| %>
-  <li><b><%= event.host %></b> hosted JelloPan on <b><%= event.event_date.strftime("%B %d, %Y") %></b> playing the album <b><%= event.album %></b> with the secret ingredient <b><%= event.ingredient %></b> 
-  <%= link_to "edit", edit_event_path(event.id) %> 
+  <li><b><%= event.host %></b> hosted JelloPan on <b><%= event.event_date.strftime("%B %d, %Y") %></b> playing the album <b><%= event.album %></b> with the secret ingredient <b><%= event.ingredient %></b>
+  <%= link_to "edit", edit_event_path(event.id) %>
   <%= link_to "delete", event, method: :delete,
                                data: { confirm: "You sure?" },
                                title: event.album %>
@@ -12,3 +12,7 @@
 </ul>
 
 <%= link_to 'Add Event', new_event_path, :class => "btn" %>
+
+<br>
+
+Looking for an album suggestion? How about <%= @album_suggestions.sample %>

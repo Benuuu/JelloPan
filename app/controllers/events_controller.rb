@@ -1,6 +1,11 @@
 class EventsController < ApplicationController
   def index
     @events = Event.all
+    @album_suggestions = [
+      "\"The Party Album!\" by Vengaboys",
+      "\"The Platinum Album\" by Vengaboys",
+      "\"Xmas Party Album\" by Vengaboys",
+    ]
   end
 
   def new
